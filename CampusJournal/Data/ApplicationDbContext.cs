@@ -11,5 +11,6 @@ namespace CampusJournal.Data
         {
         }
         public DbSet<CampusJournal.Models.StudentsViewModel> StudentsViewModel { get; set; } = default!;
+        public DbSet<CampusJournal.Models.Payment> Payment { get; set; } = default!;
     }
 }
