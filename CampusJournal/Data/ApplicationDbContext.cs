@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CampusJournal.Models;
 
 namespace CampusJournal.Data
 {
@@ -9,5 +10,6 @@ namespace CampusJournal.Data
             : base(options)
         {
         }
+        public DbSet<CampusJournal.Models.StudentsViewModel> StudentsViewModel { get; set; } = default!;
     }
 }
