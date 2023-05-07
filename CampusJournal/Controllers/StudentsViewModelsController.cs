@@ -56,7 +56,7 @@ namespace CampusJournal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,StudentIndexNumber,firstName,lastName,email,PhoneNumber,DateOfBirth,Address,City")] StudentsViewModel studentsViewModel)
+        public async Task<IActionResult> Create([Bind("Id,StudentIndexNumber,firstName,lastName,email,PhoneNumber,ReleaseDate,Address,City")] StudentsViewModel studentsViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace CampusJournal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,StudentIndexNumber,firstName,lastName,email,PhoneNumber,DateOfBirth,Address,City")] StudentsViewModel studentsViewModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,StudentIndexNumber,firstName,lastName,email,PhoneNumber,ReleaseDate,Address,City")] StudentsViewModel studentsViewModel)
         {
             if (id != studentsViewModel.Id)
             {

@@ -28,9 +28,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AddRolesGroup" asp-action="Index">AddRolesGroup</a>
-                        </li>
+                        <!-- Adds role autorize -->
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="AddRolesGroup" asp-action="Index">AddRolesGroup</a>
+                            </li>
+                        }
+                        else
+                        {
+
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
